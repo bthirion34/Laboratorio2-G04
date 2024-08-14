@@ -105,7 +105,7 @@ def last_book(catalog):
 
 # Funciones para la manipulacion de los datos 
 
-def add_book_tags(catalog, booktagsfile):
+def add_book_tags_file(catalog, booktagsfile):
     """
     Esta funcion guardar los booktags provenientes del archivo CSV.
     """
@@ -142,15 +142,5 @@ def tag_size(catalog):
 
 
 def book_tag_size(catalog):
-    # TODO: Mods de Est-3 en el Lab 2
-    pass
-
-
-def first_book(catalog):
-    # TODO: Mods de Est-3 en el Lab 2
-    pass
-
-
-def last_book(catalog):
     # TODO: Mods de Est-3 en el Lab 2
     pass
