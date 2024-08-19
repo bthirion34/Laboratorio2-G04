@@ -50,7 +50,7 @@ def print_menu():
     print("1- Cargar Libros")
     print("2- Cargar Tags")
     # TODO: Mods de Est-1 en el Lab 2, agregar opcion 3
-
+    print("3- Cargar Book-Tags!!!...")
     print("0- Salir")
 
 
@@ -77,6 +77,7 @@ def load_books_tags(control):
     Cargar los Tags de libros
     """
     # TODO: Mods de Est-1 en el Lab 2
+
     pass
 
 
@@ -127,6 +128,9 @@ def main():
 
         elif int(inputs[0]) == 3:
             # TODO: Mods de Est-3 en el Lab 2
+            print("Crgando informacion de Book-Tags...")
+            booktags = load_books_tags(control)
+            print("Total de Book-Tags cargados: " + str(booktags))
             pass
 
         elif int(inputs[0]) == 0:
