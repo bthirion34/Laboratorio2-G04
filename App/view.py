@@ -77,16 +77,20 @@ def load_books_tags(control):
     Cargar los Tags de libros
     """
     # TODO: Mods de Est-1 en el Lab 2
-    pass
+    booktags = logic.load_books_tags(control, "GoodReads/book_tags-small.csv")
+    return booktags
 
 
 def first_book(control):
     """
     Devuelve el primer libro del catalogo
     """
-    booktags = logic.load_books_tags(control,"GoodReads/book_tags-small.csv")
+    
     # TODO: Mods de Est-1 en el Lab 2
-    return booktags
+    first = logic.first_book(control)
+    first = first_book(control)
+    print("primer libro cargado:/n"+str(first+"/n"))
+    return first
 
 
 def last_book(control):
