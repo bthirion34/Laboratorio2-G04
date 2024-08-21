@@ -132,6 +132,9 @@ def main():
 
         elif int(inputs[0]) == 3:
             # TODO: Mods de Est-3 en el Lab 2
+            print("Crgando informacion de Book-Tags...")
+            booktags = load_books_tags(control)
+            print("Total de Book-Tags cargados: " + str(booktags))
             pass
 
         elif int(inputs[0]) == 0:
