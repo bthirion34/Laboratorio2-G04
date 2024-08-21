@@ -59,7 +59,7 @@ def load_books(control):
     Carga los libros
     """
     books = logic.load_books(control,
-                                  "GoodReads/books-small.csv")
+                                  "GoodReads/books.csv")
     return books
 
 
@@ -77,7 +77,7 @@ def load_books_tags(control):
     Cargar los Tags de libros
     """
     # TODO: Mods de Est-1 en el Lab 2
-    booktags = logic.load_books_tags(control, "GoodReads/book_tags-small.csv")
+    booktags = logic.load_books_tags(control, "GoodReads/book_tags.csv")
     return booktags
 
 
