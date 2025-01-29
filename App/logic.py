@@ -29,28 +29,48 @@
 import csv
 import os
 
+# Importar el modulo de la estructura de datos set
 from DataStructures import Set as set
 
+# Directorio de datos de los archivos
 data_dir = os.path.dirname(os.path.realpath('__file__')) + '/Data/'
 
 """
-La logica es el sitio donde se manipulan los datos y donde se le responde a la view
+La lógica se encarga de procesar los datos y realizar las operaciones
+sobre ellos. En este caso, se encarga de cargar los datos y realizar
+las consultas sobre ellos.
 """
 
 
 def new_logic():
     """
-    Crea una instancia de la logica
+    Inicializa los datos y crea un catalogo vacio. 
+
+    Para esta actividad, un catalogo es un diccionario donde se guardan
+    las estructuras de datos que representan los libros, los autores, los
+    generos y la asociación entre libros y generos. 
+
+    Se crea un catalogo con las siguientes atributos:
+    - books: Set para guardar los libros.
+    - tags: Set para guardar los generos.
+    - book_tags: Set para guardar la asociación entre libros y generos.
+
+    :return: Catalogo inicializado
+    :rtype: dict
     """
 
-    catalog = {"books": None,
-            "tags": None,
-            "book_tags": None}
-    
-    # Se crean los conjuntos vacios
+    # Creación del catalogo vacio
+    catalog = {
+        "books": None,
+        "tags": None,
+        "book_tags": None
+    }
+
+    # Inicialización de las estructuras de datos
     catalog["books"] = set.new_set()
     catalog["tags"] = set.new_set()
     catalog["book_tags"] = set.new_set()
+
     return catalog
 
 
@@ -58,31 +78,59 @@ def new_logic():
 
 def load_books(catalog, filename):
     """
-    Carga los libros del archivo.  Por cada libro se toman sus autores y por
-    cada uno de ellos, se crea el conjunto de autores, a dicho autor y una
+    Función que carga los libros en el catalogo.
+
+    Por cada libro se toman sus autores y por cada uno de ellos, se crea en la lista de autores, a dicho autor y una
     referencia al libro que se esta procesando.
+
+    :param catalog: Catalogo de la aplicación
+    :type catalog: dict
+    :param filename: Nombre del archivo csv con los libros
+    :type filename: str
+
+    :returns: Tamaño del conjunto de libros
+    :rtype: int
     """
     books = catalog["books"]
     books_file = os.path.join(data_dir, filename)
-    catalog["books"] = set.load_set(books, books_file) 
+    catalog["books"] = set.load_set(books, books_file)
     return book_size(catalog)
 
 
 def load_tags(catalog, filename):
     """
     Carga todos los tags del archivo y los agrega a la lista de tags
+
+    :param catalog: Catalogo de la aplicación
+    :type catalog: dict
+    :param filename: Nombre del archivo csv con los tags
+    :type filename: str
+
+    :returns: Tamaño del conjunto de tags
+    :rtype: int
     """
     tags_file = os.path.join(data_dir, filename)
     input_file = csv.DictReader(open(tags_file, encoding="utf-8"))
     catalog["tags"] = set.new_set()
+
     for tag in input_file:
         set.add_element(catalog["tags"], tag)
+
     return tag_size(catalog)
 
 
 def load_books_tags(catalog, filename):
     """
-    Carga los tags de los libros del archivo
+    Carga los tags de los libros del archivo y los agrega a la lista
+    de tags. Siga el mismo procedimiento que en la carga de libros.
+
+    :param catalog: Catalogo de la aplicación
+    :type catalog: dict
+    :param filename: Nombre del archivo csv con los tags de los libros
+    :type filename: str
+
+    :returns: Tamaño del conjunto de tags de los libros
+    :rtype: int
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
     pass
@@ -103,11 +151,20 @@ def last_book(catalog):
     # TODO: Mods Est-3 en el Lab 2
     pass
 
-# Funciones para la manipulacion de los datos 
+# Funciones para la manipulacion de los datos
+
 
 def add_book_tags_file(catalog, booktagsfile):
     """
     Esta funcion guardar los booktags provenientes del archivo CSV.
+
+    :param catalog: Catalogo de la aplicación
+    :type catalog: dict
+    :param booktagsfile: Nombre del archivo csv con los booktags
+    :type booktagsfile: str
+
+    :returns: catalog
+    :rtype: dict
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
     pass
@@ -124,6 +181,14 @@ def create_book_tag_list(catalog):
 def add_book_tag(catalog, booktag):
     """
     Esta funcion agrega un elemento a lista de booktags.
+
+    :param catalog: Catalogo de la aplicación
+    :type catalog: dict
+    :param booktag: Tag a agregar
+    :type booktag: dict
+
+    :returns: catalog
+    :rtype: dict
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
     pass
