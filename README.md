@@ -73,9 +73,9 @@ Este repositorio de laboratorio tiene cuatro partes principales:
 
 Para usar esta plantilla, debe seguir los pasos a continuación:
 
-- Lea las instrucciones oficiales de laboratorio publicadas en el sitio oficial del curso en [BrightSpace][BrightSpace-url].
+- Lea las instrucciones oficiales de laboratorio publicadas en el sitio oficial del curso en **BrightSpace (Bloque Neon)**.
 - Distribuir las tareas de laboratorio entre los miembros del grupo.
-- Descargue el conjunto de datos oficial del laboratorio desde el sitio oficial del curso en [BrightSpace] [BrightSpace-url].
+- Descargue el conjunto de datos oficial del laboratorio desde el sitio oficial del curso en **BrightSpace (Bloque Neon)**.
 - Descomprima y cargue el conjunto de datos en la aplicación en la carpeta [Data](./Data).
 - Implemente las funciones que faltan de acuerdo con las instrucciones de laboratorio en los scripts MVC en la carpeta [App](./App).
 - Complete el informe de laboratorio, registre sus pruebas y análisis en los documentos en la carpeta [Docs](./Docs) de acuerdo con las instrucciones (El informe **DEBE SER** en formato PDF).
@@ -135,10 +135,6 @@ Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA 
 
 [Volver al inicio](#laboratorio-2)
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-<!-- links for DISClib -->
-
 [contributors-shield]: https://img.shields.io/github/contributors/ISIS1225DEVS/ISIS1225-Lib.svg?style=for-the-badge
 [contributors-url]: https://github.com/ISIS1225DEVS/ISIS1225-Lib/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/ISIS1225DEVS/ISIS1225-Lib.svg?style=for-the-badge
@@ -149,11 +145,6 @@ Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA 
 [issues-url]: https://github.com/ISIS1225DEVS/ISIS1225-Lib/issues
 [license-shield]: https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge
 [license-url]: https://github.com/ISIS1225DEVS/ISIS1225-Lib/blob/master/LICENSE
-
-<!-- [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png -->
-
 [uniandes-url]: https://cursos.virtual.uniandes.edu.co/isis1225/
 [organization-url]: https://github.com/ISIS1225DEVS/
 [disclib-url]: https://github.com/ISIS1225DEVS/ISIS1225-Lib
@@ -161,6 +152,7 @@ Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA 
 [bugs-url]: https://github.com/ISIS1225DEVS/ISIS1225-Lib/issues
 [issues-url]: https://github.com/ISIS1225DEVS/ISIS1225-Lib/issues
 [gnu-url]: http://www.gnu.org/licenses/
+[data-struc-url]: https://isis1225devs.github.io/ISIS1225-Structure-Documentation/
 
 <!-- contributors  -->
 
@@ -168,22 +160,6 @@ Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA 
 [phillipus85-url]: https://github.com/phillipus85
 [le99-url]: https://github.com/le99
 [afrodriguezm1-url]: https://github.com/afrodriguezm1
-
-<!-- EDA lab + challenges repository -->
-
-[sample-mvc-url]: https://github.com/ISIS1225DEVS/ISIS1225-SampleMVC
-[sample-conflicts-url]: https://github.com/ISIS1225DEVS/ISIS1225-SampleConflicts
-[sample-list-url]: https://github.com/ISIS1225DEVS/ISIS1225-SampleList
-[sample-sort-url]: https://github.com/ISIS1225DEVS/ISIS1225-SampleSorts
-[sample-map-url]: https://github.com/ISIS1225DEVS/ISIS1225-SampleMap
-[sample-collision-url]: https://github.com/ISIS1225DEVS/ISIS1225-SampleCollision
-[sample-tree-url]: https://github.com/ISIS1225DEVS/ISIS1225-SampleTree
-[sample-graph-url]: https://github.com/ISIS1225DEVS/ISIS1225-SampleGraph
-[sample-algorithm-url]: https://github.com/ISIS1225DEVS/ISIS1225-SampleAlgorithm
-[challenge1-url]: https://github.com/ISIS1225DEVS/Reto1-Template
-[challenge2-url]: https://github.com/ISIS1225DEVS/Reto2-Template
-[challenge3-url]: https://github.com/ISIS1225DEVS/Reto3-Template
-[challenge4-url]: https://github.com/ISIS1225DEVS/Reto4-Template
 
 <!-- links for EDA Sample-Conflicts lab repository -->
 
