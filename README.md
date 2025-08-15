@@ -40,7 +40,7 @@ Los estudiantes editan esta sección para agregar sus nombres, correos electrón
 
 1. Juliana Rodríguez Morales, js.rodriguezm1234@uniandes.edu.co, Funcionalidad propiedad del estudiante No. 1.
 1. Juan Andrés Lozada Barragán, j.lozadab@uniandes.edu.co, Funcionalidad propiedad del estudiante No. 2.
-1. Maria Clara Quijano, m.quijanoa@uniandes.edu.co , Funcionalidad propiedad del estudiante No. 3.
+1. Maria Clara Quijano, m.quijanoa@uniandes.edu.co, Funcionalidad propiedad del estudiante No. 3.
 
 [Volver al inicio](#laboratorio-2)
 
