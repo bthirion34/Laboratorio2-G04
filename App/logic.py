@@ -119,21 +119,15 @@ def load_tags(catalog, filename):
     return tag_size(catalog)
 
 
-def load_books_tags(catalog, filename):
-    """
-    Carga los tags de los libros del archivo y los agrega a la lista
-    de tags. Siga el mismo procedimiento que en la carga de libros.
-
-    :param catalog: Catalogo de la aplicación
-    :type catalog: dict
-    :param filename: Nombre del archivo csv con los tags de los libros
-    :type filename: str
-
-    :returns: Tamaño del conjunto de tags de los libros
-    :rtype: int
-    """
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+def load_books_tags(control, filename): 
+    """ 
+    … 
+    """ 
+    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2 
+    catalog = control["model"] 
+    booksfile = os.path.join(cf.data_dir, filename) 
+    catalog = model.addBookTags(catalog, booksfile) 
+    return model.bookTagSize(catalog) 
 
 
 def first_book(catalog):
@@ -154,44 +148,32 @@ def last_book(catalog):
 # Funciones para la manipulacion de los datos
 
 
-def add_book_tags_file(catalog, booktagsfile):
-    """
-    Esta funcion guardar los booktags provenientes del archivo CSV.
-
-    :param catalog: Catalogo de la aplicación
-    :type catalog: dict
-    :param booktagsfile: Nombre del archivo csv con los booktags
-    :type booktagsfile: str
-
-    :returns: catalog
-    :rtype: dict
-    """
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+def add_book_tags_file(catalog, booktagsfile): 
+    """ 
+    Esta función guardar los booktags provenientes del archivo CSV. 
+    … 
+    """ 
+    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2 
+    catalog["book_tags"] = set.new_set() 
+    return catalog 
 
 
-def create_book_tag_list(catalog):
-    """
-    Esta funcion crea una lista vacia para booktags.
-    """
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+def create_book_tag_list(catalog): 
+    """ 
+    Esta función crea una lista vacía para booktags. 
+    """ 
+    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2 
+    catalog["book_tags"] = set.new_set() 
+    return catalog
 
 
-def add_book_tag(catalog, booktag):
-    """
-    Esta funcion agrega un elemento a lista de booktags.
-
-    :param catalog: Catalogo de la aplicación
-    :type catalog: dict
-    :param booktag: Tag a agregar
-    :type booktag: dict
-
-    :returns: catalog
-    :rtype: dict
-    """
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+def add_book_tag(catalog, booktag): 
+    """ 
+    Esta función agrega un elemento a lista de booktags. 
+    """ 
+    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2 
+    set.add_element(catalog["book_tags"], booktag) 
+    return catalog 
 
 
 # Funciones de consulta
