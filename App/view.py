@@ -48,17 +48,13 @@ def new_logic():
     return control
 
 
-def print_menu():
-    """
-    Imprime el menú de opciones en consola para el usuario
-    """
-    print("Opciones:")
-    print("1- Cargar Libros")
-    print("2- Cargar Tags")
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    # Agregue la opción 3 para cargar los tags de los libros.
-    # Pueede guiarse de las opciones 1 y 2.
-    print("0- Salir")
+def printMenu(): 
+    print("Opciones:") 
+    print("1- Cargar Libros") 
+    print("2- Cargar Tags") 
+    # TODO: Mods de Est-1 en el Lab 2, agregar opción 3 
+    print("3- Cargar los Tags de Libros") 
+    print("0- Salir") 
 
 
 def load_books(app):
