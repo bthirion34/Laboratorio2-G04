@@ -28,10 +28,12 @@
 
 import csv
 import os
+from pyexpat import model
 
 # Importar el modulo de la estructura de datos set
-from DataStructures import Set as set
+from DataStructures.Set import set
 
+print("Contenu du module Set :", dir(set))
 # Directorio de datos de los archivos
 data_dir = os.path.dirname(os.path.realpath('__file__')) + '/Data/'
 
@@ -119,54 +121,26 @@ def load_tags(catalog, filename):
     return tag_size(catalog)
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 def load_books_tags(catalog, filename):
     """
     Carga los tags de los libros del archivo y los agrega a la lista
-    de tags. Siga el mismo procedimiento que en la carga de libros.
-
-    :param catalog: Catalogo de la aplicación
-    :type catalog: dict
-    :param filename: Nombre del archivo csv con los tags de los libros
-    :type filename: str
-
-    :returns: Tamaño del conjunto de tags de los libros
-    :rtype: int
+    de book_tags.
     """
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    tf = os.path.join(data_dir, filename)
-    input_file = csv.DictReader(open(tf, encoding="utf-8"))
-    catalog["model"] = create_book_tag_list(catalog["model"])
+    booktagfile = os.path.join(data_dir, filename)
+    input_file = csv.DictReader(open(booktagfile, encoding="utf-8"))
+
+    # inicializar book_tags si no existe
+    if catalog.get("book_tags") is None:
+        catalog["book_tags"] = set.new_set()
+
     for booktag in input_file:
         add_book_tag(catalog, booktag)
+
     return book_tag_size(catalog)
 
-    pass
-=======
-def load_books_tags(catalog, filename): 
-    """ 
-    Cargo los tags de los libros del archivo 
-    """ 
-    # TODO: Mods de Est-1 y Est-2, Est-3 en el Lab 2 
-    booktagfile = os.path.join(data_dir, filename) 
-    input_file = csv.DictReader(open(booktagfile, encoding="utf-8")) 
-    catalog = create_book_tag_list(catalog) 
-    for booktag in input_file: 
-        add_book_tag(catalog, booktag) 
-    return book_tag_size(catalog) 
->>>>>>> Est-3
-=======
-def load_books_tags(control, filename): 
-    """ 
-    … 
-    """ 
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2 
-    catalog = control["model"] 
-    booksfile = os.path.join(cf.data_dir, filename) 
-    catalog = model.addBookTags(catalog, booksfile) 
-    return model.bookTagSize(catalog) 
->>>>>>> Est-1
+
+
 
 
 def first_book(catalog): 
@@ -186,7 +160,7 @@ def last_Book(catalog):
 # Funciones para la manipulacion de los datos
 
 
-<<<<<<< HEAD
+
 def add_book_tags_file(catalog, booktagsfile):
     """
     Esta funcion guardar los booktags provenientes del archivo CSV.
@@ -205,16 +179,16 @@ def add_book_tags_file(catalog, booktagsfile):
     return catalog
 
     pass
-=======
-def add_book_tags_file(catalog, booktagsfile): 
-    """ 
+
+"""def add_book_tags_file(catalog, booktagsfile): 
+    
     Esta función guardar los booktags provenientes del archivo CSV. 
-    … 
-    """ 
+    
+  
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2 
     catalog["book_tags"] = set.new_set() 
     return catalog 
->>>>>>> Est-1
+"""
 
 
 def create_book_tag_list(catalog): 
@@ -226,19 +200,13 @@ def create_book_tag_list(catalog):
     return catalog
 
 
-<<<<<<< HEAD
-def add_book_tag(catalog, booktag):
-    """
-   Esta función agrega un elemento a lista de booktags. 
-    """ 
-    # TODO: Mods de Est-1, Est-2 y Est-3 en Lab 2 
-=======
+
 def add_book_tag(catalog, booktag): 
     """ 
     Esta función agrega un elemento a lista de booktags. 
     """ 
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2 
->>>>>>> Est-1
+
     set.add_element(catalog["book_tags"], booktag) 
     return catalog 
 
