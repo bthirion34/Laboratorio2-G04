@@ -48,12 +48,12 @@ def new_logic():
     return control
 
 
-def printMenu(): 
+def print_menu(): 
     print("Opciones:") 
     print("1- Cargar Libros") 
     print("2- Cargar Tags") 
     # TODO: Mods de Est-1 en el Lab 2, agregar opción 3 
-    print("3- Cargar los Tags de Libros") 
+    print("3- Cargar Booktags") 
     print("0- Salir") 
 
 
@@ -108,6 +108,8 @@ def last_book(app):
     """
     Devuelve el último libro cargado en el conjunto de libros
     """
+    last = logic.last_book(app)
+    return last
     pass
 
 
@@ -137,7 +139,8 @@ def main():
             first = None
 
             # TODO: Mods de Est-2 en el Lab 2
-            last = None
+            last = last_book(app)
+            print("Último libro cargado:\n" + str(last) + "\n")
 
         elif int(inputs[0]) == 2:
             print("Cargando información de tags....")
