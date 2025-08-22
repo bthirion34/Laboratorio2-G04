@@ -120,6 +120,7 @@ def load_tags(catalog, filename):
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 def load_books_tags(catalog, filename):
     """
     Carga los tags de los libros del archivo y los agrega a la lista
@@ -155,6 +156,17 @@ def load_books_tags(catalog, filename):
         add_book_tag(catalog, booktag) 
     return book_tag_size(catalog) 
 >>>>>>> Est-3
+=======
+def load_books_tags(control, filename): 
+    """ 
+    … 
+    """ 
+    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2 
+    catalog = control["model"] 
+    booksfile = os.path.join(cf.data_dir, filename) 
+    catalog = model.addBookTags(catalog, booksfile) 
+    return model.bookTagSize(catalog) 
+>>>>>>> Est-1
 
 
 def first_book(catalog): 
@@ -174,6 +186,7 @@ def last_Book(catalog):
 # Funciones para la manipulacion de los datos
 
 
+<<<<<<< HEAD
 def add_book_tags_file(catalog, booktagsfile):
     """
     Esta funcion guardar los booktags provenientes del archivo CSV.
@@ -192,21 +205,40 @@ def add_book_tags_file(catalog, booktagsfile):
     return catalog
 
     pass
+=======
+def add_book_tags_file(catalog, booktagsfile): 
+    """ 
+    Esta función guardar los booktags provenientes del archivo CSV. 
+    … 
+    """ 
+    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2 
+    catalog["book_tags"] = set.new_set() 
+    return catalog 
+>>>>>>> Est-1
 
 
-def create_book_tag_list(catalog):
-    """
-    Esta funcion crea una lista vacia para booktags.
-    """
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+def create_book_tag_list(catalog): 
+    """ 
+    Esta función crea una lista vacía para booktags. 
+    """ 
+    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2 
+    catalog["book_tags"] = set.new_set() 
+    return catalog
 
 
+<<<<<<< HEAD
 def add_book_tag(catalog, booktag):
     """
    Esta función agrega un elemento a lista de booktags. 
     """ 
     # TODO: Mods de Est-1, Est-2 y Est-3 en Lab 2 
+=======
+def add_book_tag(catalog, booktag): 
+    """ 
+    Esta función agrega un elemento a lista de booktags. 
+    """ 
+    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2 
+>>>>>>> Est-1
     set.add_element(catalog["book_tags"], booktag) 
     return catalog 
 
